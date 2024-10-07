@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 public class Blog {
-    private int id;
-    private String title;
-    private User author;
-    private String body;
-    private List<Common> commons;
+
+    private int           id;
+    private String        title;
+    private User          author;
+    private String        body;
+    private List<Comment> comments;
 
     Map<String, String> labels;
 
@@ -44,12 +45,12 @@ public class Blog {
         this.body = body;
     }
 
-    public List<Common> getCommons() {
-        return commons;
+    public List<Comment> getCommons() {
+        return comments;
     }
 
-    public void setCommons(List<Common> commons) {
-        this.commons = commons;
+    public void setCommons(List<Comment> comments) {
+        this.comments = comments;
     }
 
     public Map<String, String> getLabels() {

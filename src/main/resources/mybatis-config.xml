@@ -20,6 +20,6 @@
     </environments>
     <mappers>
 <!--        <mapper resource="zzk/mapper/UserMapper.xml"/>-->
-        <mapper class="zzk.mapper.UserMapper" />
+        <package name="zzk.mapper"/>
     </mappers>
 </configuration>

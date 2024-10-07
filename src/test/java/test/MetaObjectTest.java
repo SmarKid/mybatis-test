@@ -1,11 +1,10 @@
 package test;
 
-import org.apache.ibatis.ognl.MemberAccess;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.session.Configuration;
 import org.junit.Test;
 import zzk.entity.Blog;
-import zzk.entity.Common;
+import zzk.entity.Comment;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -30,9 +29,9 @@ public class MetaObjectTest {
         System.out.println(metaObject.findProperty("author.out_look", true));
         System.out.println("------------------------------------------------");
         // 访问数组
-        Common common = new Common();
-        common.setContentStr("hello");
-        metaObject.setValue("commons", Collections.singletonList(common));
+        Comment comment = new Comment();
+        comment.setContentStr("hello");
+        metaObject.setValue("commons", Collections.singletonList(comment));
         System.out.println(blog.getCommons().get(0).getContentStr());
         System.out.println(metaObject.getValue("commons[0].contentStr"));
         System.out.println("------------------------------------------------");
