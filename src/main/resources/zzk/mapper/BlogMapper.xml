@@ -7,7 +7,7 @@
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="title" jdbcType="VARCHAR" property="title"/>
         <association property="author" column="author_id" select="selectUserByUserId"/>
-        <association property="comments" column="id" select="selectCommentByBlogId"/>
+        <association property="comments" column="id" select="selectCommentByBlogId" fetchType="lazy"/>
     </resultMap>
     <resultMap id="commentMap" type="zzk.entity.Comment" autoMapping="true">
         <result column="content_str" jdbcType="VARCHAR" property="contentStr"/>

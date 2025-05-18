@@ -1,9 +1,10 @@
 package zzk.entity;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public class Blog {
+public class Blog implements Serializable {
 
     private int           id;
     private String        title;
